@@ -1,0 +1,21 @@
+name: "Jobs dependency demo"
+
+on: [push]
+
+jobs:
+  job3:
+    runs-on: ubuntu-latest
+    needs: [job1,job2]
+    steps:
+      - name: stepC
+        run: echo "Max"
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: stepA
+        run: echo "Hello"
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: stepB
+        run: echo "World"
