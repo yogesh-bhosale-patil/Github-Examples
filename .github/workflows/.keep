@@ -1,6 +1,6 @@
 name: "Jobs dependency demo"
 
-on: [push]
+on: ['push']
 
 jobs:
   job3:
